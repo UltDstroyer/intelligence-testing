@@ -5,16 +5,16 @@ This checklist defines **done** in terms of verifiable artifacts and tests. Mark
 ## M0 — Repository and development foundation
 **Goal:** A repeatable local environment and a safe foundation for participant data.
 
-- [ ] Create a TypeScript/React web app with a documented local startup command.
-- [ ] Create a FastAPI Python service with version-pinned dependencies and one documented health route.
-- [ ] Document NixOS-first setup (optionally a dev shell/flake), plus platform-neutral startup instructions.
-- [ ] Establish frontend and backend lint, format, type-check, and test commands.
-- [ ] Add CI that runs checks on every pull request and fails on broken builds.
-- [ ] Add .gitignore covering secrets, local databases, generated datasets, node_modules, caches, and participant exports.
-- [ ] Add a minimal privacy notice, voluntary participation disclosure, withdrawal/delete workflow specification, and consent gate design.
-- [ ] Document repository structure and a reproducible smoke test.
+- [x] Create a TypeScript/React web app with a documented local startup command.
+- [x] Create a FastAPI Python service with version-pinned dependencies and one documented health route.
+- [x] Document NixOS-first setup (optionally a dev shell/flake), plus platform-neutral startup instructions.
+- [x] Establish frontend and backend lint, format, type-check, and test commands.
+- [x] Add CI that runs checks on every pull request and fails on broken builds.
+- [x] Add .gitignore covering secrets, local databases, generated datasets, node_modules, caches, and participant exports.
+- [x] Add a minimal privacy notice, voluntary participation disclosure, withdrawal/delete workflow specification, and consent gate design.
+- [x] Document repository structure and a reproducible smoke test.
 
-**Exit evidence:** Clean checkout passes CI and runs locally; no participant event can be recorded before consent.
+**Exit evidence:** Backend and frontend CI checks pass on PR #1 (GitHub Actions run 37896362986). The API has no participant-event intake endpoint, and the preview is gated by consent acknowledgment. **M0 is not finally accepted until an actual NixOS clean-clone smoke test, dependency locks, and frontend formatting gate are completed in issue #2.**
 
 ## M1 — Measurement design and experiment specification
 **Goal:** Specify what is being observed before building score formulas.

@@ -2,7 +2,7 @@
 
 **An opt-in, game-like platform for exploring human cognitive strengths, learning potential, specialization, and performance variability.**
 
-> **Status:** Planning / specification only. No working assessment or validated scores exist yet.
+> **Status:** M0 foundation implemented on a feature branch. No playable cognitive assessment or validated intelligence scores exist yet.
 
 ## Vision
 
@@ -72,3 +72,33 @@ This is a personal-development tool, **not** a system for ranking human worth, d
 ## Contributing
 
 Initially use GitHub issues and pull requests for changes, attaching a short test plan and evidence that relevant acceptance criteria are met. Keep assessment logic auditable, version all generated tasks, and do not commit participant data or secrets.
+
+
+## Milestone 0: local foundation (feature branch)
+
+The initial scaffold is proposed in **[PR #1](https://github.com/UltDstroyer/intelligence-testing/pull/1)**. It includes a responsive React/TypeScript consent-first preview and a FastAPI health endpoint. These are **not** working cognitive assessments yet.
+
+To try the scaffold on NixOS:
+
+~~~bash
+git clone https://github.com/UltDstroyer/intelligence-testing.git
+cd intelligence-testing
+git switch feat/m0-foundation
+nix-shell
+python -m venv .venv
+source .venv/bin/activate
+pip install -e "./backend[dev]"
+uvicorn app.main:app --app-dir backend --reload --host 127.0.0.1 --port 8000
+~~~
+
+From a second terminal:
+
+~~~bash
+cd intelligence-testing/web
+npm install
+npm run dev
+~~~
+
+Open **http://127.0.0.1:5173**. The app requests acknowledgment before opening its placeholder lab preview; it does not record cognitive attempts.
+
+See [development setup](docs/DEVELOPMENT.md), [technical architecture](docs/ARCHITECTURE.md), and [privacy specification](docs/PRIVACY.md). CI status and any remaining work are tracked in PR #1.
