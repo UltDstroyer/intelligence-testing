@@ -1,0 +1,39 @@
+# JavaScript / frontend
+node_modules/
+web/dist/
+web/coverage/
+*.tsbuildinfo
+
+# Python / backend
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.venv/
+venv/
+*.egg-info/
+build/
+dist/
+.coverage
+htmlcov/
+
+# Local state and participant data (never commit)
+.env
+.env.*
+!.env.example
+*.sqlite
+*.sqlite3
+*.db
+data/
+exports/
+participant-data/
+*.csv
+*.parquet
+*.jsonl
+
+# OS / editors
+.DS_Store
+.idea/
+.vscode/
+.direnv/
+result
