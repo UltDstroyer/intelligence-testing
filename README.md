@@ -2,7 +2,7 @@
 
 **An opt-in, game-like platform for exploring human cognitive strengths, learning potential, specialization, and performance variability.**
 
-> **Status:** Planning / specification only. No working assessment or validated scores exist yet.
+> **Status:** M0 foundation implemented on a feature branch. No playable cognitive assessment or validated intelligence scores exist yet.
 
 ## Vision
 
